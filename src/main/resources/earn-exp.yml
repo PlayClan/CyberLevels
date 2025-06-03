@@ -365,3 +365,22 @@ earn-exp:
       enabled: false
       blocks:
         - 'CARROT: 4, 6'
+
+  # Used for RivalPickaxes
+  rivalp-breaking:
+    general:
+      enabled: false
+      exp: 1
+      includes:
+        enabled: false
+        whitelist: false
+        list:
+         - "DIRT"
+         - "GRASS_BLOCK"
+         - "SAND"
+         - "STONE"
+         - "NETHERRACK"
+    specific-blocks:
+      enabled: false
+      blocks:
+        - 'DIAMOND_ORE: 4, 6'

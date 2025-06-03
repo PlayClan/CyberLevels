@@ -8,6 +8,7 @@ import net.zerotoil.dev.cyberlevels.listeners.AntiAbuseListeners;
 import net.zerotoil.dev.cyberlevels.listeners.EXPListeners;
 import net.zerotoil.dev.cyberlevels.listeners.JoinListener;
 import net.zerotoil.dev.cyberlevels.listeners.hooks.RivalHarvesterHoesHook;
+import net.zerotoil.dev.cyberlevels.listeners.hooks.RivalPickaxesHook;
 import net.zerotoil.dev.cyberlevels.objects.exp.EXPCache;
 import net.zerotoil.dev.cyberlevels.objects.levels.LevelCache;
 import net.zerotoil.dev.cyberlevels.objects.files.Files;
@@ -53,6 +54,11 @@ public final class CyberLevels extends JavaPlugin {
         if (Bukkit.getPluginManager().getPlugin("RivalHarvesterHoes") != null) {
             logger("&7Hooked into &bRivalHarvesterHoes&7.");
             new RivalHarvesterHoesHook(this);
+        }
+
+        if (Bukkit.getPluginManager().getPlugin("RivalPickaxes") != null) {
+            logger("&7Hooked into &bRivalPickaxes&7.");
+            new RivalPickaxesHook(this);
         }
 
         new Metrics(this, 13782, this);
